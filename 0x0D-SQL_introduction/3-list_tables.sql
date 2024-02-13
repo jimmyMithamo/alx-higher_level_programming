@@ -1,4 +1,4 @@
-/* List all tables on a database*/
+-- List all tables on a database*/
 
 SHOW TABLES;
 
