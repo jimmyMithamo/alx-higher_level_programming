@@ -11,11 +11,11 @@ if __name__ == "__main__":
     cur = db.cursor()
     sql_query = """SELECT GROUP_CONCAT(cities.name SEPARATOR ',') FROM cities
     JOIN states ON cities.state_id = states.id WHERE states.name = %s 
-    ORDER BY cities.id ASC"""
+    ORDER BY cities.id"""
     cur.execute(sql_query, (sys.argv[4],))
     rows = cur.fetchone()
     if rows:
         print(rows[0])
-        
+
     cur.close()
     db.close()
